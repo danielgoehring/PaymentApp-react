@@ -139,14 +139,24 @@ function App() {
     <Router>
         <div className="App">
       
-        
+        {/* <Link to="/">Home</Link> */}
+          {/* {visible === true && <Navbar user={user} onClick={logout} toggleuserloggedonstatus={toggleUserLoggedOnStatus} loggedonstatus={loggedOnStatus} />} */}
+          {/* <Signup name={name} password={password} setName={setName} setPassword={setPassword} submitBtn={submitBtn} onClick={handleNew} isClicked={clicked} setRegisterEmail={setRegisterEmail} setRegisterPassword={setRegisterPassword} /> */}
           <Navbar user={user} onClick={logout} toggleuserloggedonstatus={toggleUserLoggedOnStatus} loggedonstatus={loggedOnStatus} />
             <Routes>
               <Route path="/home" element={<Home user={user}/>} />
               <Route path="/signin" element={<Signin setLoginEmail={setLoginEmail} setLoginPassword={setLoginPassword} onClick={login} togglesigninpage={toggleSigninPage} submitBtn={submitBtn} clicked={clicked} loginpassword={loginPassword} loginEmail={loginEmail}/>} />
               <Route path="/" element={<Signup password={password} setName={setName} setPassword={setPassword} submitBtn={submitSignupForm} onClick={register} isClicked={clicked} setRegisterEmail={setRegisterEmail} setRegisterPassword={setRegisterPassword} togglesignuppage={toggleSignupPage}/>} />
             </Routes>
-        
+            
+          
+
+          
+          
+          
+          {/* <Signup password={password} setName={setName} setPassword={setPassword} submitBtn={submitSignupForm} onClick={register} isClicked={clicked} setRegisterEmail={setRegisterEmail} setRegisterPassword={setRegisterPassword} togglesignuppage={toggleSignupPage}/>
+          <Signin setLoginEmail={setLoginEmail} setLoginPassword={setLoginPassword} onClick={login} togglesigninpage={toggleSigninPage} submitBtn={submitBtn} clicked={clicked}/>
+          <Home /> */}
       </div>
     </Router>
   );
