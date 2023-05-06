@@ -25,12 +25,12 @@ const Signin = () => {
         <div className="container-ctn">
             <div className="signin-box-container">
                 <form onSubmit={signIn}>
-                    <label htmlFor="">EMAIL, MOBILE, OR USERNAME</label>
+                    <label htmlFor="">EMAIL</label>
                     <input type="text" id="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                     <label htmlFor="">PASSWORD</label>
                     <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                     <div className="lower-form">
-                        <a class="forgotpassword" href="#">Forgot Password?</a>
+                        <p class="forgotpassword" href="#">Forgot Password?</p>
                         <button type="submit" className="signin-btn" >
                             Sign in
                         </button>
@@ -42,7 +42,7 @@ const Signin = () => {
         </div>   
         <div style={{textAlign: 'center'}}>
             <p>Don't have an account?</p>
-            <a class="forgotpassword" href="#"><Link to="/">Create Account</Link></a>
+            <p class="forgotpassword" href="#"><Link to="/">Create Account</Link></p>
         </div>
         <div id="btnsignin">
         

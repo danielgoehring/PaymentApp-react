@@ -2,7 +2,7 @@ import Home from './Home';
 import Signup from './components/auth/Signup'
 import Signin from './components/auth/Signin'
 import AuthDetails from './components/AuthDetails';
-import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
 
