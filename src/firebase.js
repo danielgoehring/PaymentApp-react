@@ -1,22 +1,23 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from 'firebase/auth';
-import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAqOfT6aVZiwXhs6LvijWT5ce5eEToTTVA",
-  authDomain: "firestore-project-3a0a1.firebaseapp.com",
-  projectId: "firestore-project-3a0a1",
-  storageBucket: "firestore-project-3a0a1.appspot.com",
-  messagingSenderId: "216596977327",
-  appId: "1:216596977327:web:93d2b6b75e235c6ed8665a"
+  apiKey: "AIzaSyAWPvDVKt0VygEwm3eg9EUnW1km9qsbU7E",
+  authDomain: "paymentapp-project.firebaseapp.com",
+  projectId: "paymentapp-project",
+  storageBucket: "paymentapp-project.appspot.com",
+  messagingSenderId: "309555304502",
+  appId: "1:309555304502:web:78ca1e8dbf8196508e2097"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const auth = getAuth(app);
-export default getFirestore();
+// Initialize Firebase Authentication and get a reference to the service
+const auth = getAuth(app);
+
+export { auth };

@@ -1,15 +1,20 @@
 import React from 'react'
 import image from './dogpicture.jpg';
+import AuthDetails from './components/AuthDetails';
 
-const Home = ({ user }) => {
+
+const Home = () => {
     return (
         <div className="main-container">
             <div className="container-left">
             <div className="img-name-ct">
                 <img src={image} alt="" className="profile-pic"/>
                 <div className="name-ct">
-                    <p>Hi,</p>
-                    <a>user</a>
+                    <p style={{marginRight:'10px'}}>Hi,</p>
+                    <div>
+                    <AuthDetails />
+                    </div>
+
                 </div>
             </div>
             <div className="money-ct">
@@ -39,12 +44,17 @@ const Home = ({ user }) => {
             <div className="btn-swap-container">
                
             </div>
+            <div style={{textAlign: 'right'}}>
+                    {/* <AuthDetails /> */}
+                </div>
             <div className="name-section-container">
+                
                 <div className="name-section">
                     <div className="name-img">
                         <img src={image} alt="" className="other-pro-pic"/>
                     </div>
                     <div className="otherinfo">
+                        
                         <div className="name-i">
                             <p><span className="bold">user</span> paid <span className="bold">Daniel Goehring</span></p>
                         </div>

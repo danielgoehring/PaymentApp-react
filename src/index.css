@@ -1,6 +1,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: rgb(49, 49, 49);
+  color: white;
 }
 
 .nav {
@@ -76,8 +78,8 @@ body {
   text-align: left;
   width: 430px;
   height: 260px;
-  background-color: rgb(246, 246, 246);
-  border: 1px solid rgb(236, 236, 236);
+  background-color: rgb(59, 60, 70);
+  border: 1px solid rgb(59, 60, 70);
   border-radius: 5px;
 }
 
@@ -92,13 +94,21 @@ body {
 input {
   margin-bottom: 45px;
   padding: 10px;
-  background-color: rgb(246, 246, 246);
+  background-color: rgb(67, 67, 67);
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: groove;
-  border-bottom: 1px solid rgb(209, 209, 209);
+  border-bottom: 1px solid rgb(67, 67, 67);
   outline-width: 0;
+}
+
+input[type="text"] {
+  color: rgb(255, 255, 255);
+}
+
+input[type="password"] {
+  color: white;
 }
 
 form {
@@ -112,12 +122,13 @@ form {
   
 }
 
+
 .lower-form a {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: #33a340;
+  color: white;
   font-size: 14px;
 }
 
@@ -203,7 +214,7 @@ form {
 
 .name-ct {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   text-align: left;
   margin-left: 30px;
