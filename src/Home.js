@@ -56,7 +56,7 @@ const Home = () => {
                     <div className="otherinfo">
                         
                         <div className="name-i">
-                            <p><span className="bold">user</span> paid <span className="bold">Daniel Goehring</span></p>
+                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
                         </div>
                         <div className="i1">
                             
@@ -79,7 +79,7 @@ const Home = () => {
                     </div>
                     <div className="otherinfo">
                         <div className="name-i">
-                            <p><span className="bold">user</span> paid <span className="bold">Daniel Goehring</span></p>
+                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
                         </div>
                         <div className="i1">
                          
@@ -102,7 +102,7 @@ const Home = () => {
                     </div>
                     <div className="otherinfo">
                         <div className="name-i">
-                            <p><span className="bold">user</span> paid <span className="bold">Daniel Goehring</span></p>
+                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
                         </div>
                         <div className="i1">
                         
@@ -125,7 +125,7 @@ const Home = () => {
                     </div>
                     <div className="otherinfo">
                         <div className="name-i">
-                            <p><span className="bold">user</span> paid <span className="bold">Daniel Goehring</span></p>
+                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
                         </div>
                         <div className="i1">
                             
@@ -148,7 +148,7 @@ const Home = () => {
                     </div>
                     <div className="otherinfo">
                         <div className="name-i">
-                            <p><span className="bold">user</span> paid <span className="bold">Daniel Goehring</span></p>
+                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
                         </div>
                         <div className="i1">
                             
@@ -171,7 +171,7 @@ const Home = () => {
                     </div>
                     <div className="otherinfo">
                         <div className="name-i">
-                            <p><span className="bold">user</span> paid <span className="bold">Daniel Goehring</span></p>
+                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
                         </div>
                         <div className="i1">
                             
@@ -194,7 +194,7 @@ const Home = () => {
                     </div>
                     <div className="otherinfo">
                         <div className="name-i">
-                            <p><span className="bold">user</span> paid <span className="bold">Daniel Goehring</span></p>
+                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
                         </div>
                         <div className="i1">
                         
