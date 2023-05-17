@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const Signin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+
     const navigate = useNavigate();
 
     const signIn = (e) => {
@@ -17,6 +19,7 @@ const Signin = () => {
             navigate('/home');
         }).catch((error) => {
             console.log(error);
+            setError(error.message);
         })
     }
     return (
@@ -45,7 +48,10 @@ const Signin = () => {
             <p class="forgotpassword" href="#"><Link to="/">Create Account</Link></p>
         </div>
         <div id="btnsignin">
-        
+
+        </div>
+        <div style={{textAlign: 'center', marginTop: '60px'}}>
+            {error && <p style={{color: '#ba3127'}}>Invalid Username or Password</p>} 
         </div>
     </div>
     )

@@ -1,9 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import image from './dogpicture.jpg';
 import AuthDetails from './components/AuthDetails';
+import Payment from './Payment'
+import Modal from './Modal';
 
 
 const Home = () => {
+
+  const [payments, setPayments] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [name, setName] = useState("");
+  const [reason, setReason] = useState("");
+  const [amount, setAmount] = useState("");
+
+  const removePayment = (indexToRemove) => {
+    setPayments(payments.filter((payment, index) => index !== indexToRemove));
+  };
+  
+
+  const makePayment = () => {
+    setShowModal(true);
+  };
+
+  const addPayment = () => {
+    setPayments([...payments, { name, reason, amount }]);
+    setName("");
+    setReason("");
+    setShowModal(false);
+    setAmount("");
+  };
+
     return (
         <div className="main-container">
             <div className="container-left">
@@ -37,179 +64,37 @@ const Home = () => {
             </div>
             
             <div className="button-ctn">
-                <button id="porButton">Make Payment</button>
+                <button id="porButton" onClick={makePayment}>Make Payment</button>
             </div>
         </div>
-        <div className="container-right">
-            <div className="btn-swap-container">
-               
+        {showModal && (
+        <Modal onClose={() => setShowModal(false)}>
+            <h2>Make a Payment</h2>
+            <label>
+            <span style={{margin:'10px'}}>Name:</span>
+            <input style={{color: 'white'}} value={name} onChange={e => setName(e.target.value)} />
+            </label>
+            <label>
+            <span style={{margin:'10px'}}>Amount:</span> 
+            <input style={{color: 'white'}} value={amount} onChange={e => setAmount(e.target.value)} />
+            </label>
+            <label>
+            <span style={{margin:'10px'}}>Reason:</span>
+            <input style={{color: 'white'}} value={reason} onChange={e => setReason(e.target.value)} />
+            </label>
+            <div>
+            <button className="addPayment" onClick={addPayment}>Add Payment</button>
             </div>
-            <div style={{textAlign: 'right'}}>
-                    {/* <AuthDetails /> */}
-                </div>
-            <div className="name-section-container">
-                
-                <div className="name-section">
-                    <div className="name-img">
-                        <img src={image} alt="" className="other-pro-pic"/>
-                    </div>
-                    <div className="otherinfo">
-                        
-                        <div className="name-i">
-                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
-                        </div>
-                        <div className="i1">
-                            
-                        </div>
-                        <div className="occasion">
-                            for work
-                        </div>
-                        <div className="emojies">
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="divider"></div>
-            </div>  
-            <div className="name-section-container">
-                <div className="name-section">
-                    <div className="name-img">
-                        <img src={image} alt="" className="other-pro-pic"/>
-                    </div>
-                    <div className="otherinfo">
-                        <div className="name-i">
-                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
-                        </div>
-                        <div className="i1">
-                         
-                        </div>
-                        <div className="occasion">
-                            for work
-                        </div>
-                        <div className="emojies">
-                           
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="divider"></div>
-            </div>  
-            <div className="name-section-container">
-                <div className="name-section">
-                    <div className="name-img">
-                        <img src={image} alt="" className="other-pro-pic"/>
-                    </div>
-                    <div className="otherinfo">
-                        <div className="name-i">
-                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
-                        </div>
-                        <div className="i1">
-                        
-                        </div>
-                        <div className="occasion">
-                            for work
-                        </div>
-                        <div className="emojies">
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="divider"></div>
-            </div>  
-            <div className="name-section-container">
-                <div className="name-section">
-                    <div className="name-img">
-                        <img src={image} alt="" className="other-pro-pic"/>
-                    </div>
-                    <div className="otherinfo">
-                        <div className="name-i">
-                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
-                        </div>
-                        <div className="i1">
-                            
-                        </div>
-                        <div className="occasion">
-                            for work
-                        </div>
-                        <div className="emojies">
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="divider"></div>
-            </div>  
-            <div className="name-section-container">
-                <div className="name-section">
-                    <div className="name-img">
-                        <img src={image} alt="" className="other-pro-pic"/>
-                    </div>
-                    <div className="otherinfo">
-                        <div className="name-i">
-                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
-                        </div>
-                        <div className="i1">
-                            
-                        </div>
-                        <div className="occasion">
-                            for work
-                        </div>
-                        <div className="emojies">
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="divider"></div>
-            </div>  
-            <div className="name-section-container">
-                <div className="name-section">
-                    <div className="name-img">
-                        <img src={image} alt="" className="other-pro-pic"/>
-                    </div>
-                    <div className="otherinfo">
-                        <div className="name-i">
-                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
-                        </div>
-                        <div className="i1">
-                            
-                        </div>
-                        <div className="occasion">
-                            for work
-                        </div>
-                        <div className="emojies">
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="divider"></div>
-            </div>  
-            <div className="name-section-container">
-                <div className="name-section">
-                    <div className="name-img">
-                        <img src={image} alt="" className="other-pro-pic"/>
-                    </div>
-                    <div className="otherinfo">
-                        <div className="name-i">
-                            <p><span className="bold">you</span> paid <span className="bold">Daniel Goehring</span></p>
-                        </div>
-                        <div className="i1">
-                        
-                        </div>
-                        <div className="occasion">
-                            for work
-                        </div>
-                        <div className="emojies">
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="divider"></div>
-            </div>  
+      </Modal>
+      )}
+        <div className="container-right">
+        {payments.length === 0 ? (
+                    <div style={{textAlign: 'center'}}><p>Click "make payment" button to make payments...</p></div>
+                ) : (
+                    payments.map((payment, i) => (
+                        <Payment key={i} name={payment.name} reason={payment.reason} amount={payment.amount} onRemove={() => removePayment(i)} />
+                    ))
+                )}
         </div>
         </div>
     )
