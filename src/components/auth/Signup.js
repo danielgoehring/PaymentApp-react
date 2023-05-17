@@ -8,6 +8,8 @@ import { Link, useNavigate } from 'react-router-dom';
 const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+
 
         const navigate = useNavigate();
        
@@ -21,6 +23,8 @@ const Signup = () => {
             navigate('/home');
         }).catch((error) => {
             console.log(error);
+            setError(error.message);
+
         })
         
     }
@@ -49,6 +53,9 @@ const Signup = () => {
         </div>
         <div id="btnsignin">
         
+        </div>
+        <div style={{textAlign: 'center', marginTop: '60px'}}>
+            {error && <p style={{color: '#ba3127'}}>Password must be atleast 6 characters / Invalid email</p>} 
         </div>
     </div>
     )
