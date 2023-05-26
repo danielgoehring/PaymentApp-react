@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import image from './dogpicture.jpg';
 import AuthDetails from './components/AuthDetails';
@@ -13,6 +13,16 @@ const Home = () => {
   const [name, setName] = useState("");
   const [reason, setReason] = useState("");
   const [amount, setAmount] = useState("");
+  const [balance, setBalance] = useState(2000);
+  const [isBelowZero, setisBelowZero] = useState(false);
+ 
+  useEffect(() => {
+    if (balance < 0) {
+        setisBelowZero(true);
+    }
+}, [balance])
+  
+  
 
   const removePayment = (indexToRemove) => {
     setPayments(payments.filter((payment, index) => index !== indexToRemove));
@@ -21,14 +31,20 @@ const Home = () => {
 
   const makePayment = () => {
     setShowModal(true);
+    setBalance(2000);
+    setisBelowZero(false);
   };
 
   const addPayment = () => {
+    
     setPayments([...payments, { name, reason, amount }]);
     setName("");
     setReason("");
     setShowModal(false);
     setAmount("");
+    setBalance(balance-amount);
+    
+    
   };
 
     return (
@@ -46,7 +62,7 @@ const Home = () => {
             </div>
             <div className="money-ct">
                 <div className="m1">
-                    $0.00 in PaymentApp
+                    ${balance} in PaymentApp
                 </div>
                 <div className="transfer-m">
                     Transfer Funds
@@ -84,16 +100,26 @@ const Home = () => {
             </label>
             <div>
             <button className="addPayment" onClick={addPayment}>Add Payment</button>
+            
             </div>
       </Modal>
       )}
         <div className="container-right">
         {payments.length === 0 ? (
-                    <div style={{textAlign: 'center'}}><p>Click "make payment" button to make payments...</p></div>
+                    <div style={{textAlign: 'center'}}><p>Click "make payment" button to make payments...</p>
+                    
+                    </div>
+                    
                 ) : (
+                    <>
+                    {balance >= 0 && !isBelowZero ? (
                     payments.map((payment, i) => (
                         <Payment key={i} name={payment.name} reason={payment.reason} amount={payment.amount} onRemove={() => removePayment(i)} />
                     ))
+                    ) : <div style={{textAlign: 'center'}}><p style={{color: '#d42424'}}>You don't have enough funds. Please try again.</p></div>}
+                    {/* {balance < 0 && (<div style={{textAlign: 'center'}}><p style={{color: '#d42424'}}>You don't have enough funds. Please try again.</p></div>)} */}
+
+                    </>
                 )}
         </div>
         </div>
