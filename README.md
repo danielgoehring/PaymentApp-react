@@ -23,7 +23,7 @@ The Payment App is a web application built using React.js and Firebase. It provi
 
 ![Payment App Demo](./demo.gif) <!-- Replace with your actual demo GIF or screenshot -->
 
-You can try out the live app [here](https://your-payment-app-url.com).
+You can try out the live app [here]([https://your-payment-app-url.com](https://paymentappreact.netlify.app/)).
 
 ## Features
 
