@@ -44,6 +44,8 @@ You can try out the live app [here](https://paymentappreact.netlify.app/).
    ```bash
    git clone https://github.com/your-username/payment-app.git
 
+### `npm install`   
+
 ### `npm start`
 
 Runs the app in the development mode.\
