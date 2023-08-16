@@ -1,6 +1,6 @@
 # Payment App
 
-Welcome to the Payment App repository! This app is a payment platform built using React.js and Firebase authentication, allowing users to create accounts, log in, and manage their payments securely.
+This app is a payment platform built using React.js and Firebase authentication, allowing users to create accounts, log in, and manage their payments securely.
 
 ## Table of Contents
 
