@@ -41,7 +41,7 @@ You can try out the live app [here](https://paymentappreact.netlify.app/).
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/payment-app.git
+   git clone https://github.com/danielgoehring/PaymentApp-react.git
 
 ### `npm install`   
 
