@@ -73,8 +73,8 @@ const Home = () => {
             </div>
             <div className="cred-container">
                 <div className="credit-card">
-                    <div className="cc">PaymentApp Credit Card</div>
-                    <div className="cc2">You're invited to apply</div>
+                    <div className="cc">PaymentApp's Pay Later </div>
+                    <div className="cc2">Apply for opportunity</div>
                 </div>
                 <div className="learn-more">Learn more</div>
             </div>
@@ -85,22 +85,25 @@ const Home = () => {
         </div>
         {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-            <h2>Make a Payment</h2>
-            <label>
-            <span style={{margin:'10px'}}>Name:</span>
-            <input style={{color: 'white'}} value={name} onChange={e => setName(e.target.value)} />
-            </label>
-            <label>
-            <span style={{margin:'10px'}}>Amount:</span> 
-            <input style={{color: 'white'}} value={amount} onChange={e => setAmount(e.target.value)} />
-            </label>
-            <label>
-            <span style={{margin:'10px'}}>Reason:</span>
-            <input style={{color: 'white'}} value={reason} onChange={e => setReason(e.target.value)} />
-            </label>
+            <div style={{textAlign: 'center'}}>
+                <h2>Make a Payment</h2>
+            </div>
             <div>
-            <button className="addPayment" onClick={addPayment}>Add Payment</button>
-            
+                <div>
+                    <span style={{ marginRight: '26px'}}>Name:</span>
+                    <input style={{color: 'white', width: '60%'}} value={name} onChange={e => setName(e.target.value)} />
+                </div>
+                <div>
+                    <span style={{marginRight: '12px'}}>Amount:</span> 
+                    <input style={{color: 'white', width: '60%'}} value={amount} onChange={e => setAmount(e.target.value)} />
+                </div>
+                <div>
+                    <span style={{ marginRight: '15px'}}>Reason:</span>
+                    <input style={{color: 'white', width: '60%'}} value={reason} onChange={e => setReason(e.target.value)} />
+                </div>
+            </div>
+            <div style={{textAlign: 'center'}}>
+                <button className="addPayment" onClick={addPayment}>Add Payment</button>
             </div>
       </Modal>
       )}

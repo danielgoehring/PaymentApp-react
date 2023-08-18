@@ -17,8 +17,7 @@ const Modal = ({ children, onClose }) => {
       <div style={{ 
         display: 'flex', // Add flexbox layout to center the modal box
         flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
+        
         width: '80%', // Adjust to desired size
         maxWidth: '400px', // Maximum width for mobile view
         backgroundColor: 'rgb(44, 44, 44)', 
