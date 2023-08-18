@@ -4,7 +4,7 @@ This app is a payment platform built using React.js and Firebase authentication,
 
 - Create an account and press Sign Up.
 - Once logged in the user can make payments to other users.
-- The user has the option to log out and log back in with newly created account.
+- The user has the option to log out and log back in with the newly created account.
 
 ## Table of Contents
 
