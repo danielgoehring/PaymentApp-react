@@ -1,6 +1,10 @@
 # Payment App
 
-This app is a payment platform built using React.js and Firebase authentication, allowing users to create accounts, log in, and manage their payments securely.
+This app is a payment platform built using React.js and Firebase authentication, allowing users to create accounts, log in, and manage their payments securely to other users.
+
+- Create an account and press Sign Up.
+- Once logged in the user can make payments to other users.
+- The user has the option to log out and log back in with newly created account.
 
 ## Table of Contents
 
@@ -9,11 +13,6 @@ This app is a payment platform built using React.js and Firebase authentication,
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Authentication](#authentication)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Description
 
