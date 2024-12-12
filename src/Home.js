@@ -119,11 +119,28 @@ const Home = () => {
               <button
                 className="addPayment"
                 onClick={() => {
-                  if (amount > balance) {
-                    alert("You don't have enough funds");
-                  } else {
+                  if (amount < balance && reason !== "" && name !== "") {
                     addPayment();
+                    alert("this ran");
+                  } else {
+                    if (amount > balance) {
+                      alert("You don't have enough funds");
+                    } else if (amount === "" && reason === "" && name === "") {
+                      alert("Please provide information");
+                    } else if (name === "") {
+                      alert("Please enter a name");
+                    } else if (amount === "") {
+                      alert("Please enter an amount");
+                    } else if (reason === "") {
+                      alert("Please enter a reason");
+                    }
                   }
+
+                  // if (amount > balance) {
+                  //   alert("You don't have enough funds");
+                  // } else {
+                  //   addPayment();
+                  // }
                 }}
                 style={{ width: "50%" }}
               >
